@@ -1,6 +1,6 @@
 public class Player {
     private int score;
-    private int winCon = 40;
+    private int winCon = 40; // TODO Flyttes senere, forbiliver for nu
     private boolean isTurn;
     private String playerName;
 
