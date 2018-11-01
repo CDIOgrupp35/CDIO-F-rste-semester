@@ -12,6 +12,12 @@ public class Game {
         pName2 = playerName2;
     }
 
+    /** Passes the turn to the next player */
+    public void turnSwitch(Player playerOne){
+        isTurn = false;
+        playerOne.isTurn = true;
+    }
+
     public void playTurn(Player player) {
         masterDice.roll();
 
