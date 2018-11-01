@@ -20,11 +20,7 @@ public class Player {
         this.score = this.score - subInt;
     }
 
-    /** Passes the turn to the next player */
-    public void turnSwitch(Player playerOne){
-        isTurn = false;
-        playerOne.isTurn = true;
-    }
+
     /** Boolean for what player has the turn */
     public boolean getIsTurn(){
         return isTurn;
