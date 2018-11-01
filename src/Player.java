@@ -10,10 +10,9 @@ public class Player {
         this.score = 0;
     }
 
-    /** Adds the sum of two dice to a players score */
-    public int addToScore(Dice die1, Dice die2){
-        score = score + die1.getFaceValue()+die2.getFaceValue();
-        return score;
+    /** Adds an int to a players score */
+    public void addToScore(int addInt){
+        this.score = this.score + addInt;
     }
 
     /** Passes the turn to the next player */
