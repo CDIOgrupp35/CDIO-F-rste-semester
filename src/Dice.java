@@ -3,7 +3,7 @@ import java.util.Random;
 public class Dice {
     private int faceValue1;
     private int faceValue2;
-    private int sum;
+    private int _sum;
     private Random random = new Random();
 
     /**
@@ -34,19 +34,17 @@ public class Dice {
 
 
     /** Sums the face value of two dice objects */
-    public void sum() {
-        this.sum = this.faceValue1 + this.faceValue2;
-        // return this.sum;
+    public int sum() {
+        this._sum = this.faceValue1 + this.faceValue2;
+        return this._sum;
     }
 
-    public int getSum() {
-        return this.sum;
+    public int getSetSum(int i) {
+        this._sum = i;
+
+        return this._sum;
     }
 
-    public void setSum(int newSum) {
-        this.sum = newSum;
-
-    }
 
 }
 
