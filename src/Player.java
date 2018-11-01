@@ -15,6 +15,11 @@ public class Player {
         this.score = this.score + addInt;
     }
 
+    /** Subtracts an int from a players score */
+    public void subFromScore(int subInt){
+        this.score = this.score - subInt;
+    }
+
     /** Passes the turn to the next player */
     public void turnSwitch(Player playerOne){
         isTurn = false;
