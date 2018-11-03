@@ -12,11 +12,10 @@ public class Main{
         Player player1 = new Player(scan.next());
         System.out.println("Player 2 please enter your name");
         Player player2 = new Player(scan.next());
-        Dice die1 = new Dice();
-        Dice die2 = new Dice();
+        Dice die = new Dice();
 
         System.out.println("To play, press 1 and enter");
-        System.out.println( "\n " + player1.toString() + " starts!");
+        System.out.println("\n " + player1.toString() + " starts!");
 
         player1.setTurn(true);
 
@@ -28,19 +27,18 @@ public class Main{
                 if (player1.getIsTurn() && player2.getIsTurn())
                     System.out.println("An error occurred");
 
-        /** Developing the calculated sum between both dice. **/
+                /** Developing the calculated sum between both dice. **/
 
-                die1.roll();
-                die2.roll();
-                System.out.println("You rolled " + die1.getFaceValue() + " and " + die2.getFaceValue() + ", sum is " + die1.getSum(die2));
+                die.roll();
+                //System.out.println("You rolled " + die1.getFaceValue() + " and " + die2.getFaceValue() + ", sum is " + die1.getSum(die2));
 
-        /** Developing extra game-features:
-        * Two 1's = score reset + extra turn.
-        * Two of a kind = extra turn
-        **/
+                /** Developing extra game-features:
+                 * Two 1's = score reset + extra turn.
+                 * Two of a kind = extra turn
+                 **/
 
-                if (player1.getIsTurn()) {
-              
+      /*          if (player1.getIsTurn()) {
+
                     player1.addToScore(die1, die2);
                     if(die1.equals(die2) && die1.getSum(die2)==2) {
                         player1.setScore(0);
@@ -65,17 +63,18 @@ public class Main{
                 } else
                     System.out.print("An error occurred");
             }
+*/
+                /** Stating each player's points and when one player has reached the highest count. **/
 
-        /** Stating each player's points and when one player has reached the highest count. **/
-
-            showScore(player1, player2);
-            showWinner(player1, player2);
-            showTurn(player1, player2);
+                showScore(player1, player2);
+                showWinner(player1, player2);
+                showTurn(player1, player2);
 
 
             /*if(input == 2)
                 System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );*/
 
+            }
         }
     }
 
