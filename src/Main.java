@@ -16,8 +16,7 @@ public class Main{
          * Defining the players and dice. **/
         try{JSONParser parser = new JSONParser();
         Object obj = parser.parse(new FileReader("./test.json"));
-            JSONObject jobj = (JSONObject) obj;
-            JSONObject jason = new JSONObject();
+            JSONObject jason = (JSONObject) obj;
 
 
         System.out.println((String) jason.get("name"));

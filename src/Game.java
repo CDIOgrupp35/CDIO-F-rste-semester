@@ -1,4 +1,10 @@
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Game {
     private String pName1, pName2;
@@ -6,6 +12,7 @@ public class Game {
     private Player firstPlayer = new Player(pName1);
     private Player secondPlayer = new Player(pName2);
     JSONObject jText = new JSONObject();
+    JSONParser parser = new JSONParser();
 
     public Game(Player player1, Player player2, Dice dice1, String playerName1, String playerName2) {
         firstPlayer = player1;
@@ -23,10 +30,12 @@ public class Game {
 
     public void playTurn(Player playerOne, Player playerTwo) {
         masterDice.roll();
-
+        try{
+            Object obj = parser.parse(new FileReader("./test.json"));
+            JSONObject jobj = (JSONObject) obj;
         switch (masterDice.sum()) {
             case 2: playerOne.addToScore(250);
-                System.out.println("You hit " + masterDice.sum() + ", the Tower, and got 250 points!");
+                System.out.println(jobj.get("sq1"));
                 break;
             case 3: playerOne.subFromScore(100);
                 System.out.println("You hit " + masterDice.sum() + ", the Crater, and lost 100 points!");
@@ -67,6 +76,12 @@ public class Game {
         }
         System.out.println((String) jText.get("score") + playerOne.getScore());
         if(masterDice.sum() != 10)turnSwitch(playerTwo, playerOne);
-    }
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch(ParseException f){
+            f.printStackTrace();
+        }}
 }
 
