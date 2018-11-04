@@ -1,3 +1,12 @@
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import java.io.FileWriter;
+import java.io.IOException;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import java.io.FileNotFoundException;
+import java.util.Iterator;
+import java.io.FileReader;
 import java.util.Scanner;
 public class Main{
     static boolean play = true;
@@ -5,8 +14,13 @@ public class Main{
 
         /** Welcoming players to the game.
          * Defining the players and dice. **/
+        try{JSONParser parser = new JSONParser();
+        Object obj = parser.parse(new FileReader("./test.json"));
+            JSONObject jobj = (JSONObject) obj;
+            JSONObject jason = new JSONObject();
 
-        System.out.println("Welcome to IOOuterActive dice game");
+
+        System.out.println((String) jason.get("name"));
         Scanner scan = new Scanner(System.in);
         System.out.println("Player 1 please enter your name");
         Player player1 = new Player(scan.next());
@@ -75,6 +89,13 @@ public class Main{
                 System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );*/
 
             }
+        }
+        } catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch(ParseException f){
+            f.printStackTrace();
         }
     }
 
