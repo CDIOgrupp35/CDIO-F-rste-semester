@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
-
+/*
     private Dice testDice = new Dice();
     private Dice testDice2 = new Dice();
     private Player testPlayer = new Player("player1");
@@ -46,5 +46,5 @@ class PlayerTest {
         assertTrue(testPlayer.winGame());
         testPlayer2.setScore(30);
         assertFalse(testPlayer2.winGame());
-    }
+    }*/
 }
