@@ -48,6 +48,8 @@ public class Main{
             if(input == 2)
                 System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );
 
+            //hej
+
             }
         }
         } catch(FileNotFoundException e){
