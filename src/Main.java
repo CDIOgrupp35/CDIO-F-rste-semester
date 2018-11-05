@@ -16,7 +16,7 @@ public class Main{
         /*
 
         Welcoming players to the game.
-       Defining the players and dice.
+       Defining the players and dice.jh
        */
 
         try{JSONParser parser = new JSONParser();
