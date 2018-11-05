@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class DiceTest {
-
+/*
     private Dice testDice = new Dice();
     private Dice testDice2 = new Dice();
 
@@ -13,7 +13,7 @@ class DiceTest {
     /** test if the roll() method generates a random number between 1 and 6, repeated 1000 times to make sure */
     // <expected result> all tests return true
     // <actual result> all tests returned true
-    @RepeatedTest(1000)
+  /*  @RepeatedTest(1000)
     void testRoll() {
         testDice.roll();
 
@@ -131,5 +131,5 @@ class DiceTest {
         testDice.roll();
         testDice2.roll();
         assertEquals(testDice.getSum(testDice2), testDice.getFaceValue() + testDice2.getFaceValue());
-    }
+    }*/
 }
