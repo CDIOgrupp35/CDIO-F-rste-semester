@@ -53,7 +53,7 @@ public class Main{
 
                 /** Stating each player's points and when one player has reached the highest count. **/
 
-                showWinner(player1, player2);
+                //showWinner(player1, player2); TODO fix this
                 showTurn(player1, player2);
 
             //if(input == 1)
@@ -70,7 +70,7 @@ public class Main{
         }
     }
     public String getJFile(){return jFile;}
-    public static void showWinner(Player player1, Player player2){
+ /*   public static void showWinner(Player player1, Player player2){
         if(player1.winGame()) {
             System.out.print(player1.toString() + " won the game");
             play = false;
@@ -79,7 +79,7 @@ public class Main{
             System.out.print(player2.toString() + " won the game");
             play = false;
         }
-    }
+    } */ // TODO find a way to stop game
 
         /** Stating which player is next. **/
 

@@ -10,17 +10,6 @@ public class Player {
         this.balance = new Balance(1000);
     }
 
-//    /** Adds an int to a players score */
-//    public void addToScore(int addInt){
-//        this.score = this.score + addInt;
-//    }
-//
-//    /** Subtracts an int from a players score */
-//    public void subFromScore(int subInt){
-//        this.score = this.score - subInt;
-//    }
-
-
     /** Boolean for what player has the turn */
     public boolean getIsTurn(){
         return isTurn;
@@ -32,25 +21,9 @@ public class Player {
     }
 
 
-    /** If 'score' is higher or equals to the winCon, winGame is true. */
-    public boolean winGame(){
-        if(score>=winCon)
-            return true;
-        else
-            return false;
-
-    }
 
     public String toString() {
         return playerName;
     }
 
-    public int getScore(){
-        return score;
-    }
-
-
-    public void setScore(int newScore){
-        score = newScore;
-    }
 }
