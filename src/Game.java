@@ -11,6 +11,7 @@ public class Game {
     private Dice masterDice = new Dice();
     private Player firstPlayer;
     private Player secondPlayer;
+    private int winCon = 3000;
     Main main = new Main();
     JSONObject jText = new JSONObject();
     JSONParser parser = new JSONParser();
@@ -40,37 +41,37 @@ public class Game {
             JSONObject jobj = (JSONObject) obj;
             System.out.println((String) jobj.get("rollP1") + masterDice.sum()+  jobj.get("rollP2"));
         switch (masterDice.sum()) {
-            case 2: playerOne.addToScore(250);
+            case 2: playerOne.balance.addPoints(250);
                 System.out.println((String) jobj.get("sq2"));
                 break;
-            case 3: playerOne.subFromScore(100);
+            case 3: playerOne.balance.subPoints(100);
                 System.out.println((String) jobj.get("sq3"));
                 break;
-            case 4: playerOne.addToScore(100);
+            case 4: playerOne.balance.addPoints(100);
                 System.out.println((String) jobj.get("sq4"));
                 break;
-            case 5: playerOne.subFromScore(20);
+            case 5: playerOne.balance.subPoints(20);
                 System.out.println((String) jobj.get("sq5"));
                 break;
-            case 6: playerOne.addToScore(180);
+            case 6: playerOne.balance.addPoints(180);
                 System.out.println((String) jobj.get("sq6"));
                 break;
             case 7:
                 System.out.println((String) jobj.get("sq7"));
                 break;
-            case 8: playerOne.subFromScore(70);
+            case 8: playerOne.balance.subPoints(70);
                 System.out.println((String) jobj.get("sq8"));
                 break;
-            case 9: playerOne.addToScore(60);
+            case 9: playerOne.balance.addPoints(60);
                 System.out.println((String) jobj.get("sq9"));
                 break;
-            case 10: playerOne.subFromScore(80);
+            case 10: playerOne.balance.subPoints(80);
                 System.out.println((String) jobj.get("sq10"));
                 break;
-            case 11: playerOne.subFromScore(50);
+            case 11: playerOne.balance.subPoints(50);
                 System.out.println((String) jobj.get("sq11"));
                 break;
-            case 12: playerOne.addToScore(650);
+            case 12: playerOne.balance.addPoints(650);
                 System.out.println((String) jobj.get("sq12"));
 
                 break;
@@ -92,4 +93,14 @@ public class Game {
         }catch(ParseException f){
             f.printStackTrace();
         }}
+
+    public boolean winGame(Player player1, Player player2){
+        if (player1.balance.getPoints() >= 3000 ){
+            //TODO implement winner string for player1
+            return true;
+        }else if(player2.balance.getPoints() >= 3000){
+            //TODO implement winner string for player2
+            return true;
+        }else return false;
+    }
 }

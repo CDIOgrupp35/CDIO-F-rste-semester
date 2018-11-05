@@ -1,5 +1,5 @@
 public class Player {
-    private Balance balance;
+    Balance balance;
     private int winCon = 3000; // TODO Flyttes senere, forbiliver for nu
     private boolean isTurn;
     private String playerName;
