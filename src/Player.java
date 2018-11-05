@@ -1,13 +1,13 @@
 public class Player {
     private int score;
-    private int winCon = 40; // TODO Flyttes senere, forbiliver for nu
+    private int winCon = 3000; // TODO Flyttes senere, forbiliver for nu
     private boolean isTurn;
     private String playerName;
 
     /** Constructor, creates a instance of the class: player. */
     public Player(String playerName){
         this.playerName = playerName;
-        this.score = 0;
+        this.score = 1000;
     }
 
     /** Adds an int to a players score */
