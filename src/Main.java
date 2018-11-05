@@ -12,8 +12,12 @@ public class Main{
     static boolean play = true;
     public static void main(String[] args) {
 
-        /** Welcoming players to the game.
-         * Defining the players and dice. **/
+        /*
+
+        Welcoming players to the game.
+       Defining the players and dice.
+       */
+
         try{JSONParser parser = new JSONParser();
         Object obj = parser.parse(new FileReader("./test.json"));
             JSONObject jason = (JSONObject) obj;
@@ -43,13 +47,12 @@ public class Main{
                     game.playTurn(player2,player1);
                 /** Stating each player's points and when one player has reached the highest count. **/
 
-               /* showScore(player1, player2);
+                showScore(player1, player2);
                 showWinner(player1, player2);
                 showTurn(player1, player2);
 
-*/
-            /*if(input == 2)
-                System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );*/
+            if(input == 1)
+                System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );
 
             }
         }
