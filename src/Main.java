@@ -32,6 +32,8 @@ public class Main{
 
         player1.setTurn(true);
 
+        /** Defining that both players can't play at once. **/
+
         while (play) {
             int input = scan.nextInt();
             if (input == 1) {
@@ -41,14 +43,13 @@ public class Main{
                     game.playTurn(player2,player1);
                 /** Stating each player's points and when one player has reached the highest count. **/
 
-                showScore(player1, player2);
+               /* showScore(player1, player2);
                 showWinner(player1, player2);
                 showTurn(player1, player2);
 
-            if(input == 2)
-                System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );
-
-            //hej
+*/
+            /*if(input == 2)
+                System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );*/
 
             }
         }
