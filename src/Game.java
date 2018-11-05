@@ -11,6 +11,7 @@ public class Game {
     private Dice masterDice = new Dice();
     private Player firstPlayer;
     private Player secondPlayer;
+    Main main = new Main();
     JSONObject jText = new JSONObject();
     JSONParser parser = new JSONParser();
 
@@ -35,7 +36,7 @@ public class Game {
     public void playTurn(Player playerOne, Player playerTwo) {
         masterDice.roll();
         try{
-            Object obj = parser.parse(new FileReader("./test.json"));
+            Object obj = parser.parse(new FileReader(main.getJFile()));
             JSONObject jobj = (JSONObject) obj;
             System.out.println((String) jobj.get("rollP1") + masterDice.sum()+  jobj.get("rollP2"));
         switch (masterDice.sum()) {
@@ -82,6 +83,7 @@ public class Game {
         else
             System.out.print(playerTwo.toString());
         System.out.println((String) jobj.get("balance") + playerOne.getScore());
+            System.out.println((String) jobj.get("balance") + playerTwo.getScore());
         if(masterDice.sum() != 10)turnSwitch(playerTwo, playerOne);
         }catch(FileNotFoundException e){
             e.printStackTrace();
