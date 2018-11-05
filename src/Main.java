@@ -50,7 +50,14 @@ public class Main{
                 game.playTurn(player1, player2);
                 else
                     game.playTurn(player2,player1);
+
                 /** Stating each player's points and when one player has reached the highest count. **/
+
+                showWinner(player1, player2);
+                showTurn(player1, player2);
+
+            //if(input == 1)
+              //System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );
 
             }
         }
