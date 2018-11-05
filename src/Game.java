@@ -83,6 +83,7 @@ public class Game {
         else
             System.out.print(playerTwo.toString());
         System.out.println((String) jobj.get("balance") + playerOne.getScore());
+            System.out.println((String) jobj.get("balance") + playerTwo.getScore());
         if(masterDice.sum() != 10)turnSwitch(playerTwo, playerOne);
         }catch(FileNotFoundException e){
             e.printStackTrace();

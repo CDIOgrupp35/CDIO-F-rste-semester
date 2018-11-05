@@ -18,7 +18,7 @@ public class Json_text {
         jason.put("start", " starts");
         jason.put("turn",", it's your turn, roll the dice");
         jason.put("rollP1","you rolled ");
-        jason.put("rollP2"," which lead you too");
+        jason.put("rollP2"," which lead you to");
         jason.put("balance","'s balance is now ");
         jason.put("wrong", "Invalid input, to roll the dice please press 1 and enter");
         jason.put("error","An error occurred, contact our support");
