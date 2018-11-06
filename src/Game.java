@@ -79,12 +79,9 @@ public class Game {
                 System.out.println("Error, you did not roll a value between 2 and 12");
                 break;
         }
-        if(playerOne.getIsTurn())
-            System.out.print(playerOne.toString());
-        else
-            System.out.print(playerTwo.toString());
-        System.out.println((String) jobj.get("balance") + playerOne.balance.getPoints());
-            System.out.println((String) jobj.get("balance") + playerTwo.balance.getPoints());
+
+        System.out.println(playerOne.toString() + jobj.get("balance") + playerOne.balance.getPoints());
+        System.out.println(playerTwo.toString() + jobj.get("balance") + playerTwo.balance.getPoints());
         if(masterDice.sum() != 10)turnSwitch(playerTwo, playerOne);
         }catch(FileNotFoundException e){
             e.printStackTrace();
