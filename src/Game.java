@@ -10,7 +10,6 @@ public class Game {
     private String pName1, pName2;
     private Dice masterDice = new Dice();
     private int winCon = 3000;
-    Main main = new Main();
     private JSONObject jText = new JSONObject();
     JSONParser parser = new JSONParser();
     private boolean play = true;
