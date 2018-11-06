@@ -82,7 +82,7 @@ public class Game {
 
         System.out.println(playerOne.toString() + jText.get("balance") + playerOne.balance.getPoints());
         System.out.println(playerTwo.toString() + jText.get("balance") + playerTwo.balance.getPoints());
-        if (masterDice.sum() != 10) turnSwitch(playerTwo, playerOne);
+        if (diceRoll != 10) turnSwitch(playerTwo, playerOne);
 
     }
 
