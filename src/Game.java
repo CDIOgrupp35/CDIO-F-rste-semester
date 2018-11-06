@@ -27,7 +27,7 @@ public class Game {
         playerTwo.setTurn(false);
     }
 
-    public void playTurn(Player playerOne, Player playerTwo, int diceRoll) 
+    public void playTurn(Player playerOne, Player playerTwo, int diceRoll){
 
         System.out.println((String) jText.get("rollP1") + diceRoll + jText.get("rollP2"));
         switch (diceRoll) {
@@ -109,16 +109,16 @@ public class Game {
 
     public void playing(int input, Player player1, Player player2) {
             if (input == 1) {
-                if (player1.getIsTurn())
+                if (player1.getIsTurn()){
                     masterDice.roll();
                     playTurn(player1, player2, masterDice.sum());
-                else
+                }else {
                     masterDice.roll();
                     playTurn(player2, player1, masterDice.sum());
 
-                showTurn(player1, player2);
-                winGame(player1, player2);
-
+                    showTurn(player1, player2);
+                    winGame(player1, player2);
+                }
             }
         }
     public boolean getPlay(){return play;}
