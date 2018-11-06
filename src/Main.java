@@ -9,7 +9,6 @@ import java.util.Iterator;
 import java.io.FileReader;
 import java.util.Scanner;
 public class Main{
-    static boolean play = true;
     static String jFile;
     public static void main(String[] args) {
 
@@ -34,7 +33,7 @@ public class Main{
         Player player1 = new Player(scan.next());
         System.out.println(jason.get("enter2"));
         Player player2 = new Player(scan.next());
-        Game game = new Game(player1, player2);
+        Game game = new Game(jason);
 
         System.out.println("To play, press 1 and enter");
         System.out.println("\n " + player1.toString() + jason.get("start"));
@@ -42,20 +41,11 @@ public class Main{
         player1.setTurn(true);
 
         /** Defining that both players can't play at once. **/
-
-        while (play) {
+        while(game.getPlay()) {
             input = scan.nextInt();
-            if (input == 1) {
-                if(player1.getIsTurn())
-                game.playTurn(player1, player2);
-                else
-                    game.playTurn(player2,player1);
-
-                game.showTurn(player1, player2);
-                game.winGame(player1,player2);
-
-            }
+            game.playing(input, player1, player2);
         }
+
         } catch(FileNotFoundException e){
             e.printStackTrace();
         }catch(IOException e){
@@ -64,7 +54,4 @@ public class Main{
             f.printStackTrace();
         }
     }
-    public String getJFile(){return jFile;}
-    public boolean getPlay(){return play;}
-    public void setPlay(boolean tib){play = tib;}
 }
