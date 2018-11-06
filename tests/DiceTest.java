@@ -8,9 +8,9 @@ class DiceTest {
     private Dice testDice = new Dice();
 
 
-    /** test if the roll() method generates TWO random numbers between 1 and 6, repeated 500 times to make sure */
-    // <expected result> all tests return true
-    // <actual result> all tests returned true
+    /** test if the roll() method generates TWO random numbers between 1 and 6, repeated 500 times to make sure
+    @<expectedResult> all tests return true
+    @<actualResult> all tests returned true */
     @RepeatedTest(500)
     void testRoll() {
         testDice.roll();
@@ -21,11 +21,11 @@ class DiceTest {
 
     }
     /** test if the rolls are "fair", using the same criteria as the assignment handed in this past monday.
-     * Only testing getFacevalue1 since it is identical to getFaceValue2*/
-    // 60000 rolls, 4% margin of error.
-    // This test the same as our group's answer of the earlier assignment this week.
-    // <expected result> all rolls are spread evenly and fairly within a 4% margin of error.
-    // <actual result> successful spread of values.
+     * Only testing getFacevalue1 since it is identical to getFaceValue2
+    60000 rolls, 4% margin of error.
+    This test the same as our group's answer of the earlier assignment this week.
+    @<expectedResult> all rolls are spread evenly and fairly within a 4% margin of error.
+    @<actualResult> successful spread of values. */
     @Test
     void testFairness() {
         int ones, twos, threes, fours, fives, sixes;
@@ -71,7 +71,9 @@ class DiceTest {
 
     }
 
-    /** Testingg the addition of the Dice.Sum method with set-values  */
+    /** Testingg the addition of the Dice.Sum method with set-values
+    @<expectedResult> test returns true, addition of two integers
+    @<actualResult> test returned true, successful addition of two integers */
     @Test
     void testSum() {
         testDice.setFaceValue1(5);
