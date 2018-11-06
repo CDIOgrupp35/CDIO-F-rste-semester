@@ -65,7 +65,7 @@ public class Json_text {
         jason.put("sq11","Hullet: Du faldt ned i et stort hul og må betale 50 for din dumhed ");
         jason.put("sq12","Guldminen: Du faldt over noget guld i bjergene og sælger det for 650");
 
-        try (FileWriter file = new FileWriter("./test.json_da")){
+        try (FileWriter file = new FileWriter("./test_da.json")){
             file.write(jason.toJSONString());
             file.flush();
         }

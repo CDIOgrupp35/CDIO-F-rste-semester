@@ -95,11 +95,7 @@ public class Game {
         }}
 
     public boolean winGame(Player player1, Player player2){
-        if (player1.balance.getPoints() >= 3000 ){
-            //TODO implement winner string for player1
-            return true;
-        }else if(player2.balance.getPoints() >= 3000){
-            //TODO implement winner string for player2
+        if (player1.balance.getPoints() >= winCon || player2.balance.getPoints() >= winCon){
             return true;
         }else return false;
     }

@@ -24,7 +24,7 @@ public class Main{
         if(input == 1)
             jFile ="./test.json";
         else if (input == 2)
-            jFile ="./test.json_da";
+            jFile ="./test_da.json";
         else
             System.out.println("Not applicable option");
         try{JSONParser parser = new JSONParser();
@@ -55,9 +55,6 @@ public class Main{
 
                 //showWinner(player1, player2); TODO fix this
                 showTurn(player1, player2);
-
-            //if(input == 1)
-              //System.out.println(player1.getIsTurn()+ " " +player2.getIsTurn() );
 
             }
         }
