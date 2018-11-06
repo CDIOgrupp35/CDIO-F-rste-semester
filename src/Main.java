@@ -12,7 +12,7 @@ public class Main{
 
     public static void main(String[] args) {
 
-        String jFile;
+        String jFile = "";
 
         /** Welcoming players to the game.
          * Defining the players and dice. **/
