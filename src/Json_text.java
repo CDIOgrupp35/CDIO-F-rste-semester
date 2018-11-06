@@ -56,7 +56,7 @@ public class Json_text {
         jason.put("sq2","Tårnet: Du redder prinsessen fra Tårnet og belønnes med 250 ");
         jason.put("sq3","Krateret: Du bliver overfaldet af røvere ved Krateret og mister 100");
         jason.put("sq4","Paladsporten: Du tigger ved Paladsets Porte og formår at samle 100");
-        jason.put("sq5","Den Kolde Ørken Du er fanget i den Kolde Ørken og må investere i et tæppe til en overpris på 20 for at holde varmen ");
+        jason.put("sq5","Den Kolde Ørken: Du er fanget i den Kolde Ørken og må investere i et tæppe til en overpris på 20 for at holde varmen ");
         jason.put("sq6","Den Murrede By: Du sniger dig ind i den Murede By og stjæler 180");
         jason.put("sq7","Klosteret: Du søger midlertidig tilflugt i et kloster mod din gratis arbejdskraft");
         jason.put("sq8","Den Sorte Grotte: Du fare vild i den Sorte Grotte og må ofre 70 til bjerg-gudinden");
