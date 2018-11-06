@@ -27,11 +27,10 @@ public class Game {
         playerTwo.setTurn(false);
     }
 
-    public void playTurn(Player playerOne, Player playerTwo) {
-        masterDice.roll();
+    public void playTurn(Player playerOne, Player playerTwo, int diceRoll) 
 
-        System.out.println((String) jText.get("rollP1") + masterDice.sum() + jText.get("rollP2"));
-        switch (masterDice.sum()) {
+        System.out.println((String) jText.get("rollP1") + diceRoll + jText.get("rollP2"));
+        switch (diceRoll) {
             case 2:
                 playerOne.balance.addPoints(250);
                 System.out.println((String) jText.get("sq2"));
@@ -111,9 +110,11 @@ public class Game {
     public void playing(int input, Player player1, Player player2) {
             if (input == 1) {
                 if (player1.getIsTurn())
-                    playTurn(player1, player2);
+                    masterDice.roll();
+                    playTurn(player1, player2, masterDice.sum());
                 else
-                    playTurn(player2, player1);
+                    masterDice.roll();
+                    playTurn(player2, player1, masterDice.sum());
 
                 showTurn(player1, player2);
                 winGame(player1, player2);
