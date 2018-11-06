@@ -9,8 +9,10 @@ import java.util.Iterator;
 import java.io.FileReader;
 import java.util.Scanner;
 public class Main{
-    static String jFile;
+
     public static void main(String[] args) {
+
+        String jFile = "";
 
         /** Welcoming players to the game.
          * Defining the players and dice. **/
