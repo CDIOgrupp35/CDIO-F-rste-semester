@@ -39,6 +39,22 @@ public class Dice {
         return this._sum;
     }
 
+    public int setFaceValue1(int i) {
+        return this.faceValue1 = i;
+    }
+
+    public int setFaceValue2(int i) {
+        return this.faceValue2 = i;
+    }
+
+    public int getFaceValue1() {
+        return this.faceValue1;
+    }
+
+    public int getFaceValue2() {
+        return this.faceValue2;
+    }
+
     public int getSetSum(int i) {
         this._sum = i;
 
