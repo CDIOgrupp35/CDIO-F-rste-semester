@@ -89,11 +89,44 @@ public class Game {
             e.printStackTrace();
         }catch(ParseException f){
             f.printStackTrace();
-        }}
+        }
+    }
 
-    public boolean winGame(Player player1, Player player2){
-        if (player1.balance.getPoints() >= winCon || player2.balance.getPoints() >= winCon){
-            return true;
-        }else return false;
+    public void winGame(Player player1, Player player2){
+        try {Object obj = parser.parse(new FileReader(main.getJFile()));
+            JSONObject jobj = (JSONObject) obj;
+            if (player1.balance.getPoints() >= winCon) {
+                main.setPlay(false);
+                System.out.println(player1.toString() + jobj.get("win"));
+            }
+            else if(player2.balance.getPoints() >= winCon){
+                main.setPlay(false);
+                System.out.println(player2.toString() + jobj.get("win"));
+            }
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch(ParseException f){
+            f.printStackTrace();
+        }
+        }
+    public void showTurn(Player player1, Player player2){
+        if (main.getPlay()) {
+            try {Object obj = parser.parse(new FileReader(main.getJFile()));
+                JSONObject jobj = (JSONObject) obj;
+            if (player1.getIsTurn()) {
+                System.out.println("\n " + player1.toString() + jobj.get("turn"));
+            } else if (player2.getIsTurn()) {
+                System.out.println("\n " + player2.toString() + jobj.get("turn"));
+            }
+            }catch(FileNotFoundException e){
+                e.printStackTrace();
+            }catch(IOException e){
+                e.printStackTrace();
+            }catch(ParseException f){
+                f.printStackTrace();
+            }
+        }
     }
 }

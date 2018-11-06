@@ -22,6 +22,7 @@ public class Json_text {
         jason.put("balance","'s balance is now ");
         jason.put("wrong", "Invalid input, to roll the dice please press 1 and enter");
         jason.put("error","An error occurred, contact our support");
+        jason.put("turn",", it's your turn");
         jason.put("win",", your balance has exceeded 3000, and you have won the game");
         jason.put("sq2","The tower: You saved the princess from the tower and get 250 in reward ");
         jason.put("sq3","The Crater: You get ambushed by robbers at the Crater and lose 100");
@@ -51,6 +52,7 @@ public class Json_text {
         jason.put("rollP2"," og landede på");
         jason.put("balance","s penge beholdning er nu ");
         jason.put("wrong", "Ugyldigt input, tyk 1 og enter for at rulle med terningerne");
+        jason.put("turn",", det er din tur");
         jason.put("error","Der opstod en fejl");
         jason.put("win",", Tillykke, din pengebeholdning er har nået 3000!");
         jason.put("sq2","Tårnet: Du redder prinsessen fra Tårnet og belønnes med 250 ");
