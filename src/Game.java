@@ -12,7 +12,7 @@ public class Game {
     private int winCon = 3000;
     private JSONObject jText = new JSONObject();
     JSONParser parser = new JSONParser();
-    private boolean play = true;
+    private boolean play;
 
     public Game(JSONObject jText) {
         this.jText = jText;
@@ -108,16 +108,14 @@ public class Game {
     }
 
     public void playing(int input, Player player1, Player player2) {
-            if (input == 1) {
-                if (player1.getIsTurn())
-                    playTurn(player1, player2);
-                else
-                    playTurn(player2, player1);
+        if (input == 1) {
+            if (player1.getIsTurn())
+                playTurn(player1, player2);
+            else
+                playTurn(player2, player1);
 
-                showTurn(player1, player2);
-                winGame(player1, player2);
+            showTurn(player1, player2);
+            winGame(player1, player2);
 
-            }
         }
-    public boolean getPlay(){return play;}
-}
+    }       }
