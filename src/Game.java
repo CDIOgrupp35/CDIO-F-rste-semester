@@ -7,12 +7,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Game {
-    private String pName1, pName2;
     private Dice masterDice = new Dice();
     private int winCon = 3000;
-    Main main = new Main();
-    private JSONObject jText = new JSONObject();
-    JSONParser parser = new JSONParser();
+    private JSONObject jText;
     private boolean play = true;
 
     public Game(JSONObject jText) {
@@ -27,11 +24,10 @@ public class Game {
         playerTwo.setTurn(false);
     }
 
-    public void playTurn(Player playerOne, Player playerTwo) {
-        masterDice.roll();
+    public void playTurn(Player playerOne, Player playerTwo, int diceRoll) {
 
-        System.out.println((String) jText.get("rollP1") + masterDice.sum() + jText.get("rollP2"));
-        switch (masterDice.sum()) {
+        System.out.println((String) jText.get("rollP1") + diceRoll + jText.get("rollP2"));
+        switch (diceRoll) {
             case 2:
                 playerOne.balance.addPoints(250);
                 System.out.println((String) jText.get("sq2"));
@@ -83,7 +79,7 @@ public class Game {
 
         System.out.println(playerOne.toString() + jText.get("balance") + playerOne.balance.getPoints());
         System.out.println(playerTwo.toString() + jText.get("balance") + playerTwo.balance.getPoints());
-        if (masterDice.sum() != 10) turnSwitch(playerTwo, playerOne);
+        if (diceRoll != 10) turnSwitch(playerTwo, playerOne);
 
     }
 
@@ -110,10 +106,14 @@ public class Game {
 
     public void playing(int input, Player player1, Player player2) {
             if (input == 1) {
-                if (player1.getIsTurn())
-                    playTurn(player1, player2);
-                else
-                    playTurn(player2, player1);
+                if (player1.getIsTurn()) {
+                    masterDice.roll();
+                    playTurn(player1, player2, masterDice.sum());
+                }
+                else {
+                    masterDice.roll();
+                    playTurn(player2, player1, masterDice.sum());
+                }
 
                 showTurn(player1, player2);
                 winGame(player1, player2);
