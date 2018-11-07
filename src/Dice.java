@@ -15,23 +15,6 @@ public class Dice {
 
     }
 
-    /**
-     * Returns the face value of the die
-     */
-    /*public int getFaceValue(){
-        return this.faceValue1;
-    }
-    /**
-
-    /** Compares the face value of two dice objects */
-    /*public boolean equals(Dice another){
-        if (this.faceValue1 == another.faceValue1){
-            return true;
-        }else
-            return false;
-    }
-    /**
-
 
     /** Sums the face value of two dice objects */
     public int sum() {
@@ -54,13 +37,6 @@ public class Dice {
     public int getFaceValue2() {
         return this.faceValue2;
     }
-
-    public int getSetSum(int i) {
-        this._sum = i;
-
-        return this._sum;
-    }
-
 
 }
 
