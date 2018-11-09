@@ -37,7 +37,7 @@ public class Main{
         Player player2 = new Player(scan.next());
         Game game = new Game(jason);
 
-        System.out.println("To play, press 1 and enter");
+        System.out.println(jason.get("rules"));
         System.out.println("\n " + player1.toString() + jason.get("start"));
 
         player1.setTurn(true);
