@@ -3,13 +3,18 @@ public class Player {
     private boolean isTurn;
     private String playerName;
 
-    /** Constructor, creates a instance of the class: player. */
+    /** Constructor, creates a instance of the class: player.
+     *
+     * @param playerName The name of the player.*/
     public Player(String playerName){
         this.playerName = playerName;
         this.balance = new Balance(1000);
     }
 
-    /** Boolean for what player has the turn */
+    /** Boolean for what player has the turn *
+     *
+     * @return the internal isTurn boolean
+     */
     public boolean getIsTurn(){
         return isTurn;
     }
@@ -20,7 +25,11 @@ public class Player {
     }
 
 
-
+    /**
+     * A string containing the player's name
+     *
+     * @return The player's name.
+     */
     public String toString() {
         return playerName;
     }

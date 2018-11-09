@@ -8,6 +8,8 @@ public class Dice {
 
     /**
      * Throws one die and generates a value between 1-6
+     *
+     * @return nothing, but changes internal values
      */
     public void roll() {
         this.faceValue1 = random.nextInt(6) + 1;
@@ -16,7 +18,11 @@ public class Dice {
     }
 
 
-    /** Sums the face value of two dice objects */
+    /** Sums the face value of two dice objects
+     *
+     *
+     * @return The sum of the two internal faceValue integers
+     */
     public int sum() {
         this._sum = this.faceValue1 + this.faceValue2;
         return this._sum;
