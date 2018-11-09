@@ -3,7 +3,7 @@ public class Player {
     private boolean isTurn;
     private String playerName;
 
-    /** Constructor, creates a instance of the class: player.
+    /** Constructor, creates a instance of the class: balance.
      *
      * @param playerName The name of the player.*/
     public Player(String playerName){
